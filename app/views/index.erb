@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Create a Recipe!</title>
+ </head>
+ <body>
+ <ul>
+    <% @all.each{|recipe| %>
+        <li>
+            <a href='/recipes/<%= recipe.id %>'>
+                <%= recipe.name %>
+            </a>
+        </li>
+    <% } %>
+</ul>
+ <h1>Create a Recipe!</h1>
+ <a href='/recipes/new'>Create a new recipe!</a>
+ </body>
+</html>
